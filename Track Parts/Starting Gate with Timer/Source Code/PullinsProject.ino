@@ -5,6 +5,10 @@ LiquidCrystal_I2C lcd(0x27,20,4);  // set the LCD address to 0x27 for a 16 chars
 #define LEDPIN 13
 #define SENSORPIN 4
 
+long end_time; // When Sensor 2 is triggered
+long start_time; // When Sensor 1 is triggered
+long elapsed_time; // End time minus start time
+
 // variables will change:
 int sensorState = 0, lastState=0;         // variable for reading the pushbutton status
 
